@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  gitlab:
+    image: 'gitlab_webhook_bot:v1'
+    restart: always
+    hostname: 'gitlab_webhook'
+    container_name: gitlab_webhook_feishu
+    environment:
+      BOT_URL: 'xxxxxxx'
+    ports:
+      - '16666:6666'
